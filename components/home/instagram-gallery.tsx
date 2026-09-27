@@ -3,7 +3,7 @@ import { instagramPosts } from "@/data/instagram";
 
 export function InstagramGallery() {
   return (
-    <section className="py-16 lg:py-20">
+    <section className="pb-16 lg:pb-20">
       <div className="container-page">
         <div className="flex items-end justify-between mb-8">
           <h2 className="font-display text-[32px] sm:text-[38px] leading-tight text-ink">

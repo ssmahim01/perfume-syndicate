@@ -38,17 +38,14 @@ export function Footer() {
           <div className="flex items-center gap-3 mb-5">
             <Image
               src="/images/logo.webp"
-              alt=""
-              width={36}
-              height={36}
-              className="h-9 w-9 object-contain"
+              alt="Perfume Syndicate"
+              quality={90}
+              priority
+              width={500}
+              height={500}
+              className="h-20 w-60 object-contain"
             />
-            <span className="font-display text-lg tracking-[0.15em] uppercase leading-none">
-              Perfume
-              <span className="block text-[9px] tracking-[0.4em] text-ivory/50 font-sans font-medium mt-1">
-                Syndicate
-              </span>
-            </span>
+           
           </div>
           <p className="text-sm text-ivory/60 leading-relaxed max-w-xs">
             Timeless fragrances for every occasion. Crafted with rare ingredients,

@@ -10,11 +10,11 @@ export function Logo({ className, compact }: { className?: string, compact?: boo
     >
       <Image
         src="/images/logo.webp"
-        alt=""
+        alt="Perfume Syndicate"
         width={500}
         height={500}
         priority
-        className="h-9 w-9 sm:h-20 sm:w-40 object-contain"
+        className="h-14 w-full object-cover"
       />
      
     </Link>

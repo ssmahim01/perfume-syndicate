@@ -33,7 +33,7 @@ export function MobileNavigation() {
             onClick={() => setOpen(false)}
             className="absolute inset-0 bg-charcoal/40 backdrop-blur-sm"
           />
-          <div className="absolute right-0 top-0 h-full w-[82%] max-w-sm bg-surface shadow-xl flex flex-col">
+          <div className="absolute right-0 top-0 w-[82%] max-w-sm bg-surface h-screen shadow-xl flex flex-col">
             <div className="flex items-center justify-between px-6 h-16 border-b border-border">
               <span className="font-display text-lg uppercase tracking-wide2">Menu</span>
               <button
