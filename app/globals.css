@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ivory: 40 38% 96%;
+  --beige: 36 32% 89%;
+  --champagne: 32 40% 78%;
+  --charcoal: 25 16% 14%;
+  --burgundy: 350 42% 29%;
+  --gold: 36 38% 52%;
+
+  --surface: 40 38% 97%;
+  --surface-2: 36 30% 91%;
+  --border: 34 22% 83%;
+  --ink: 25 16% 14%;
+  --ink-soft: 25 10% 40%;
+  --accent: 36 38% 46%;
+}
+
+.dark {
+  --ivory: 22 14% 7%;
+  --beige: 22 12% 10%;
+  --champagne: 34 30% 20%;
+  --charcoal: 30 20% 92%;
+  --burgundy: 350 32% 48%;
+  --gold: 35 45% 66%;
+
+  --surface: 22 14% 8%;
+  --surface-2: 22 12% 12%;
+  --border: 30 12% 20%;
+  --ink: 38 28% 92%;
+  --ink-soft: 34 12% 64%;
+  --accent: 35 45% 66%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: hsl(var(--ivory));
+  color: hsl(var(--ink));
+}
+
+::selection {
+  background-color: hsl(var(--gold) / 0.25);
+  color: hsl(var(--ink));
+}
+
+.container-page {
+  @apply mx-auto w-full max-w-content px-5 sm:px-8 lg:px-12;
+}
+
+.eyebrow {
+  @apply text-[11px] tracking-wide2 uppercase text-ink-soft;
+}
+
+.btn-primary {
+  @apply inline-flex items-center gap-2 bg-charcoal text-ivory px-7 py-3.5 text-sm tracking-wide2 uppercase transition-colors duration-300 hover:bg-accent hover:text-ivory;
+}
+
+.btn-outline {
+  @apply inline-flex items-center gap-2 border border-ink/20 text-ink px-7 py-3.5 text-sm tracking-wide2 uppercase transition-colors duration-300 hover:border-ink hover:bg-ink/5;
+}
+
+.focus-ring {
+  @apply outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-ivory;
+}
