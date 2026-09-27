@@ -54,7 +54,7 @@ export const bestSellers: Product[] = [
     rating: 4.5,
     reviewCount: 97,
     image:
-      "https://images.unsplash.com/photo-1615372716053-4b9a0b1e6b2f?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?q=80&w=800&auto=format&fit=crop",
     imageAlt: "Pure Musk perfume bottle",
   },
   {

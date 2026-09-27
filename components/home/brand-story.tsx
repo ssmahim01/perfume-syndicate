@@ -15,7 +15,7 @@ export function BrandStory() {
       <div className="container-page grid gap-12 lg:grid-cols-2 lg:items-center">
         <div className="relative aspect-[4/3] overflow-hidden">
           <Image
-            src="https://images.unsplash.com/photo-1615372716053-4b9a0b1e6b2f?q=80&w=1200&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1608528577891-eb055944f2e7?q=80&w=900&auto=format&fit=crop"
             alt="Perfumer's hands crafting a fragrance among natural botanicals"
             fill
             sizes="(min-width: 1024px) 45vw, 90vw"
@@ -51,7 +51,9 @@ export function BrandStory() {
               <div key={stat.label}>
                 <dt className="sr-only">{stat.label}</dt>
                 <dd className="font-display text-2xl text-ink">{stat.value}</dd>
-                <p className="mt-1 text-xs text-ink-soft leading-snug">{stat.label}</p>
+                <p className="mt-1 text-xs text-ink-soft leading-snug">
+                  {stat.label}
+                </p>
               </div>
             ))}
           </dl>

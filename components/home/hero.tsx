@@ -75,7 +75,7 @@ export function Hero() {
                     fill
                     priority={index === 0}
                     sizes="(min-width: 1024px) 45vw, 90vw"
-                    className="object-cover"
+                    className="object-cover rounded-xl"
                   />
                 </div>
               </div>
