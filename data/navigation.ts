@@ -1,11 +1,39 @@
 import { NavItem } from "@/types";
 
-export const mainNav: NavItem[] = [
-  { label: "Shop", href: "/shop" },
-  { label: "Collections", href: "/collections" },
-  { label: "About", href: "/about" },
-  { label: "Journal", href: "/journal" },
+export interface MainNavItem extends NavItem {
+  menu?: "collection";
+}
+
+export const mainNav: MainNavItem[] = [
+  { label: "Home", href: "/" },
+  { label: "Collection", href: "/collection", menu: "collection" },
+  { label: "Top Brands", href: "/top-brands" },
+  { label: "Blog", href: "/blog" },
+  { label: "About Us", href: "/about-us" },
   { label: "Contact", href: "/contact" },
+];
+
+export const footerCategoryLinks: NavItem[] = [
+  { label: "Niche", href: "/niche" },
+  { label: "Designer", href: "/designer" },
+  { label: "Arabian", href: "/arabian" },
+  { label: "New Arrivals", href: "/new-arrivals" },
+  { label: "Blog", href: "/blog" },
+  { label: "Reviews", href: "/perfume-reviews" },
+];
+
+export const footerUsefulLinks: NavItem[] = [
+  { label: "My Account", href: "/my-account" },
+  { label: "Order Track", href: "/order-track" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Refund and Returns Policy", href: "/refund-and-returns-policy" },
+  { label: "About Us", href: "/about-us" },
+  { label: "Contact Us", href: "/contact-us" },
+];
+
+export const footerPolicyLinks: NavItem[] = [
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Refund and Returns Policy", href: "/refund-and-returns-policy" },
 ];
 
 export const footerShopLinks: NavItem[] = [

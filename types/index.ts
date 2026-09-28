@@ -35,14 +35,20 @@ export interface Category {
   image: string;
 }
 
-export type FragranceType = "Eau de Parfum" | "Eau de Toilette" | "Parfum" | "Eau de Cologne";
+export type FragranceType =
+  | "Eau de Parfum"
+  | "Eau de Toilette"
+  | "Parfum"
+  | "Eau de Cologne";
 
 export interface Product {
-  id: string;
+  id: string | number;
   name: string;
   fragranceType: FragranceType;
   price: number;
+  brand?: any;
   compareAtPrice?: number;
+  slug?: string;
   rating: number;
   reviewCount: number;
   image: string;
