@@ -31,7 +31,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const openCart = useCallback(() => setIsOpen(true), []);
   const closeCart = useCallback(() => setIsOpen(false), []);
 
-  const addItem = useCallback((product: Product) => {
+  const addItem = useCallback((product: any) => {
     setItems((prev) => {
       const existing = prev.find((item) => item.productId === product.id);
       if (existing) {
