@@ -1,7 +1,12 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Sparkle } from "lucide-react";
 
 const SCENT_MATCH_HREF = "/scent-match";
+
+// Swap for your own campaign photo (portrait or square works best).
+const SCENT_MATCH_IMAGE =
+  "https://images.unsplash.com/photo-1608528577891-eb055944f2e7?q=80&w=1000&auto=format&fit=crop";
 
 const steps = [
   { id: "mood", label: "Mood & occasion" },
@@ -36,26 +41,46 @@ function StepChip({ id, label }: { id: string; label: string }) {
   );
 }
 
-export function ScentMatch() {
+export function ScentMatch({ image = SCENT_MATCH_IMAGE }: { image?: string }) {
   return (
     <section aria-labelledby="scent-match-title" className="py-10 lg:py-14">
       <div className="container-page">
-        <div className="relative overflow-hidden rounded-[28px] border border-ink/[0.06] bg-gradient-to-br from-white via-white to-neutral-50 px-6 py-8 shadow-[0_1px_0_rgba(255,255,255,0.8)_inset,0_24px_60px_-32px_rgba(20,20,20,0.18)] sm:px-10 sm:py-10 lg:px-12 lg:py-12">
-          {/* Decorative red glow + faint rings, top right */}
+        <div className="relative flex flex-col overflow-hidden rounded-[28px] border border-ink/[0.06] bg-gradient-to-br from-white via-white to-neutral-50 shadow-[0_24px_60px_-32px_rgba(20,20,20,0.18)]">
+          {/* Right-side image (desktop): fades into the card on its left edge */}
           <div
             aria-hidden
-            className="pointer-events-none absolute -right-24 -top-28 h-[420px] w-[420px] rounded-full bg-red-200/50 blur-3xl"
-          />
-          <div
-            aria-hidden
-            className="pointer-events-none absolute -right-16 -top-16 hidden h-[360px] w-[360px] rounded-full border border-red-200/60 sm:block"
-          />
-          <div
-            aria-hidden
-            className="pointer-events-none absolute -right-2 top-0 hidden h-[240px] w-[240px] rounded-full border border-red-200/50 sm:block"
-          />
+            className="pointer-events-none absolute inset-y-0 right-0 hidden w-[48%] lg:block"
+          >
+            <Image
+              src={image}
+              alt=""
+              fill
+              sizes="(min-width: 1024px) 40vw, 0px"
+              className="object-cover object-center"
+              style={{
+                WebkitMaskImage:
+                  "linear-gradient(to right, transparent 0%, black 38%)",
+                maskImage:
+                  "linear-gradient(to right, transparent 0%, black 38%)",
+              }}
+            />
+            {/* soft red wash to tie the photo to the accent color */}
+            <div className="absolute inset-0 bg-gradient-to-l from-red-900/25 via-transparent to-transparent mix-blend-multiply" />
+          </div>
 
-          <div className="relative max-w-xl">
+          {/* Mobile / tablet image: sits under the copy */}
+          <div className="relative order-2 mx-6 mb-6 aspect-[16/9] overflow-hidden rounded-2xl sm:mx-10 sm:mb-10 lg:hidden">
+            <Image
+              src={image}
+              alt="Perfume"
+              fill
+              sizes="(max-width: 1023px) 90vw, 0px"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-red-900/15" />
+          </div>
+
+          <div className="relative order-1 max-w-xl px-6 pb-8 pt-8 sm:px-10 sm:pt-10 lg:px-12 lg:pb-12 lg:pt-12">
             <Eyebrow>Signature scent match · 30 seconds</Eyebrow>
 
             <h2
