@@ -22,7 +22,7 @@ const sans = Manrope({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://perfumesyndicate.com"),
+  metadataBase: new URL("https://perfumesyndicatebd.com"),
   title: {
     default: "Perfume Syndicate — Fragrance For Every Occasion",
     template: "%s | Perfume Syndicate",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "Perfume Syndicate — Fragrance For Every Occasion",
     description:
       "Discover a world of exquisite fragrances crafted with rare ingredients, made to leave a lasting impression.",
-    url: "https://perfumesyndicate.com",
+    url: "https://perfumesyndicatebd.com",
     siteName: "Perfume Syndicate",
     type: "website",
   },
